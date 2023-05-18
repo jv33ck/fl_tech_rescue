@@ -22,7 +22,7 @@ class _TabsScreenState extends State<TabsScreen> {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(message),
-        duration: const Duration(milliseconds: 500),
+        duration: const Duration(milliseconds: 700),
       ),
     );
   }
