@@ -1,23 +1,23 @@
-import 'package:fl_tech_rescue/models/meal.dart';
-import 'package:fl_tech_rescue/screens/meal_details.dart';
-import 'package:fl_tech_rescue/widgets/meal_item.dart';
+import 'package:fl_tech_rescue/models/section.dart';
+import 'package:fl_tech_rescue/screens/section_details.dart';
+import 'package:fl_tech_rescue/widgets/section_item.dart';
 import 'package:flutter/material.dart';
 
-class MealsScreen extends StatelessWidget {
-  const MealsScreen({
+class SectionsScreen extends StatelessWidget {
+  const SectionsScreen({
     super.key,
     this.title,
-    required this.meals,
+    required this.sections,
   });
 
-  final List<Meal> meals;
+  final List<Section> sections;
   final String? title;
 
-  void selectMeal(BuildContext context, Meal meal) {
+  void selectSection(BuildContext context, Section section) {
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (ctx) => MealDetailsScreen(
-          meal: meal,
+        builder: (ctx) => SectionDetailsScreen(
+          section: section,
         ),
       ),
     );
@@ -46,13 +46,13 @@ class MealsScreen extends StatelessWidget {
       ),
     );
 
-    if (meals.isNotEmpty) {
+    if (sections.isNotEmpty) {
       content = ListView.builder(
-        itemCount: meals.length,
-        itemBuilder: (ctx, index) => MealItem(
-          meal: meals[index],
-          onSelectMeal: (meal) {
-            selectMeal(context, meal);
+        itemCount: sections.length,
+        itemBuilder: (ctx, index) => SectionItem(
+          section: sections[index],
+          onSelectSection: (section) {
+            selectSection(context, section);
           },
         ),
       );

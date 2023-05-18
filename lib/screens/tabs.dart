@@ -1,5 +1,5 @@
 import 'package:fl_tech_rescue/screens/categories.dart';
-import 'package:fl_tech_rescue/screens/meals.dart';
+import 'package:fl_tech_rescue/screens/sections.dart';
 import 'package:fl_tech_rescue/widgets/main_drawer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -36,9 +36,9 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
     var activePageTitle = 'Categories';
 
     if (_selectedPageIndex == 1) {
-      final favoriteMeals = ref.watch(favoriteMealsProvider);
-      activePage = MealsScreen(
-        meals: favoriteMeals,
+      final favoriteSections = ref.watch(favoriteSectionsProvider);
+      activePage = SectionsScreen(
+        sections: favoriteSections,
       );
       activePageTitle = 'Your Favorites';
     }

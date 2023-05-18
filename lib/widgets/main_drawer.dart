@@ -15,11 +15,8 @@ class MainDrawer extends StatelessWidget {
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 colors: [
-                  Theme.of(context).colorScheme.primaryContainer,
-                  Theme.of(context)
-                      .colorScheme
-                      .primaryContainer
-                      .withOpacity(0.8),
+                  Theme.of(context).colorScheme.surface,
+                  Theme.of(context).colorScheme.surface.withOpacity(0.8),
                 ],
                 begin: Alignment.topLeft,
                 end: Alignment.bottomRight,
@@ -28,15 +25,15 @@ class MainDrawer extends StatelessWidget {
             child: Row(
               children: [
                 Icon(
-                  Icons.fastfood,
+                  Icons.menu_open,
                   size: 48,
-                  color: Theme.of(context).colorScheme.primary,
+                  color: Theme.of(context).colorScheme.onSurface,
                 ),
                 const SizedBox(width: 18),
                 Text(
-                  'Cooking Up!',
+                  'Menu',
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
-                        color: Theme.of(context).colorScheme.primary,
+                        color: Theme.of(context).colorScheme.onSurface,
                       ),
                 ),
               ],
@@ -44,36 +41,53 @@ class MainDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(
-              Icons.restaurant,
+              Icons.menu_book,
               size: 26,
               color: Theme.of(context).colorScheme.onBackground,
             ),
             title: Text(
-              'Meals',
+              'Guides',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                     fontSize: 24,
                   ),
             ),
             onTap: () {
-              onSelectScreen('meals');
+              onSelectScreen('Field Guides');
             },
           ),
           ListTile(
             leading: Icon(
-              Icons.settings,
+              Icons.info,
               size: 26,
               color: Theme.of(context).colorScheme.onBackground,
             ),
             title: Text(
-              'Filters',
+              'Manuals',
               style: Theme.of(context).textTheme.titleSmall!.copyWith(
                     color: Theme.of(context).colorScheme.onBackground,
                     fontSize: 24,
                   ),
             ),
             onTap: () {
-              onSelectScreen('filters');
+              onSelectScreen('Equipment Manuals');
+            },
+          ),
+          ListTile(
+            leading: Icon(
+              Icons.folder,
+              size: 26,
+              color: Theme.of(context).colorScheme.onBackground,
+            ),
+            title: Text(
+              'Documents',
+              style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                    color: Theme.of(context).colorScheme.onBackground,
+                    fontSize: 24,
+                  ),
+            ),
+            onTap: () {
+              onSelectScreen('Deployment Documents');
             },
           ),
         ],

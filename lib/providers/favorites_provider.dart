@@ -1,23 +1,23 @@
-import 'package:fl_tech_rescue/models/meal.dart';
+import 'package:fl_tech_rescue/models/section.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
-class FavoriteMealsNotifier extends StateNotifier<List<Meal>> {
-  FavoriteMealsNotifier() : super([]);
+class FavoriteSectionsNotifier extends StateNotifier<List<Section>> {
+  FavoriteSectionsNotifier() : super([]);
 
-  bool toggleMealFavoriteStatus(Meal meal) {
-    final mealIsFavorite = state.contains(meal);
+  bool toggleSectionFavoriteStatus(Section section) {
+    final sectionIsFavorite = state.contains(section);
 
-    if (mealIsFavorite) {
-      state = state.where((m) => m.id != meal.id).toList();
+    if (sectionIsFavorite) {
+      state = state.where((s) => s.id != section.id).toList();
       return false;
     } else {
-      state = [...state, meal];
+      state = [...state, section];
       return true;
     }
   }
 }
 
-final favoriteMealsProvider =
-    StateNotifierProvider<FavoriteMealsNotifier, List<Meal>>((ref) {
-  return FavoriteMealsNotifier();
+final favoriteSectionsProvider =
+    StateNotifierProvider<FavoriteSectionsNotifier, List<Section>>((ref) {
+  return FavoriteSectionsNotifier();
 });

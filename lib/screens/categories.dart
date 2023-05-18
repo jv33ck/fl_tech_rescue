@@ -1,6 +1,6 @@
-import 'package:fl_tech_rescue/data/dummy_data.dart';
+import 'package:fl_tech_rescue/data/data.dart';
 import 'package:fl_tech_rescue/models/category.dart';
-import 'package:fl_tech_rescue/screens/meals.dart';
+import 'package:fl_tech_rescue/screens/sections.dart';
 import 'package:fl_tech_rescue/widgets/category_grid_item.dart';
 import 'package:flutter/material.dart';
 
@@ -8,15 +8,15 @@ class CategoriesScreen extends StatelessWidget {
   const CategoriesScreen({super.key});
 
   void _selectCategory(BuildContext context, Category category) {
-    final filteredMeals = dummyMeals
-        .where((meal) => meal.categories.contains(category.id))
+    final filteredSections = categorySections
+        .where((section) => section.categories.contains(category.id))
         .toList();
 
     Navigator.of(context).push(
       MaterialPageRoute(
-        builder: (ctx) => MealsScreen(
+        builder: (ctx) => SectionsScreen(
           title: category.title,
-          meals: filteredMeals,
+          sections: filteredSections,
         ),
       ),
     ); // Navigator.push(context, route)

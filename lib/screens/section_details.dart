@@ -1,38 +1,37 @@
-import 'package:fl_tech_rescue/models/meal.dart';
+import 'package:fl_tech_rescue/models/section.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_tech_rescue/providers/favorites_provider.dart';
 
-class MealDetailsScreen extends ConsumerWidget {
-  const MealDetailsScreen({
+class SectionDetailsScreen extends ConsumerWidget {
+  const SectionDetailsScreen({
     super.key,
-    required this.meal,
+    required this.section,
   });
 
-  final Meal meal;
+  final Section section;
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final favoriteMeals = ref.watch(favoriteMealsProvider);
+    final favoriteSections = ref.watch(favoriteSectionsProvider);
 
-    final isFavorite = favoriteMeals.contains(meal);
+    final isFavorite = favoriteSections.contains(section);
 
     return Scaffold(
       appBar: AppBar(
-        title: Text(meal.title),
+        title: Text(section.title),
         actions: [
           IconButton(
             onPressed: () {
               final wasAdded = ref
-                  .read(favoriteMealsProvider.notifier)
-                  .toggleMealFavoriteStatus(meal);
+                  .read(favoriteSectionsProvider.notifier)
+                  .toggleSectionFavoriteStatus(section);
               ScaffoldMessenger.of(context).clearSnackBars();
               ScaffoldMessenger.of(context).showSnackBar(
                 SnackBar(
                   content: Text(wasAdded
                       ? 'Added to Favorites.'
                       : 'Removed from Favorites.'),
-                  duration: const Duration(milliseconds: 700),
                 ),
               );
             },
@@ -44,7 +43,7 @@ class MealDetailsScreen extends ConsumerWidget {
         child: Column(
           children: [
             Image.network(
-              meal.imageUrl,
+              section.imagePath,
               height: 300,
               width: double.infinity,
               fit: BoxFit.cover,
@@ -58,7 +57,7 @@ class MealDetailsScreen extends ConsumerWidget {
                   ),
             ),
             const SizedBox(height: 14),
-            for (final ingredient in meal.ingredients)
+            for (final ingredient in section.requiredItems)
               Text(
                 ingredient,
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
@@ -74,7 +73,7 @@ class MealDetailsScreen extends ConsumerWidget {
                   ),
             ),
             const SizedBox(height: 14),
-            for (final step in meal.steps)
+            for (final step in section.steps)
               Padding(
                 padding: const EdgeInsets.symmetric(
                   horizontal: 12,
