@@ -38,6 +38,11 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
         currentCategoryId = 'manual';
         currentScreenTitle = 'Equipment Manuals';
       });
+    } else if (identifier == 'Deployment Documents') {
+      setState(() {
+        currentCategoryId = 'document';
+        currentScreenTitle = 'Deployment Documents';
+      });
     }
   }
 

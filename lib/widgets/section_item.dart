@@ -1,6 +1,5 @@
 import 'package:fl_tech_rescue/models/section.dart';
 import 'package:flutter/material.dart';
-import 'package:transparent_image/transparent_image.dart';
 
 class SectionItem extends StatelessWidget {
   const SectionItem({
@@ -27,37 +26,41 @@ class SectionItem extends StatelessWidget {
         },
         child: Stack(
           children: [
-            FadeInImage(
-              placeholder: MemoryImage(kTransparentImage),
-              image: NetworkImage(section.imageURL),
+            Image(
+              image: AssetImage(section.imagePath),
               fit: BoxFit.cover,
-              height: 200,
-              width: double.infinity,
+              height: 100,
+              width: 100,
             ),
             Positioned(
+              top: 0,
               bottom: 0,
-              left: 0,
+              left: 100,
               right: 0,
               child: Container(
-                color: Colors.black54,
-                padding:
-                    const EdgeInsets.symmetric(vertical: 6, horizontal: 44),
-                child: Column(
-                  children: [
-                    Text(
-                      section.title,
-                      maxLines: 2,
-                      textAlign: TextAlign.center,
-                      softWrap: true,
-                      overflow: TextOverflow.ellipsis, // Very long text ...
-                      style: const TextStyle(
-                        fontSize: 20,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white,
-                      ),
-                    ),
-                    const SizedBox(height: 12),
+                decoration: BoxDecoration(
+                    gradient: LinearGradient(
+                  colors: [
+                    Colors.blueGrey.shade800.withOpacity(0.55),
+                    Colors.blueGrey.shade500.withOpacity(0.9),
                   ],
+                  begin: Alignment.topLeft,
+                  end: Alignment.bottomRight,
+                )),
+                padding:
+                    // const EdgeInsets.symmetric(vertical: 6, horizontal: 44),
+                    const EdgeInsets.only(top: 35, left: 30),
+                child: Text(
+                  section.title,
+                  maxLines: 2,
+                  textAlign: TextAlign.left,
+                  softWrap: true,
+                  overflow: TextOverflow.ellipsis, // Very long text ...
+                  style: const TextStyle(
+                    fontSize: 20,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                  ),
                 ),
               ),
             )

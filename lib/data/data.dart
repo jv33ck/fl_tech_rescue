@@ -8,52 +8,68 @@ const availableCategories = [
   Category(
     id: 'guide',
     title: 'Structural Collapse',
+    imagePath: '',
     color: Colors.deepOrange,
   ),
   Category(
     id: 'guide',
     title: 'Rope Rescue',
+    imagePath: '',
     color: Colors.deepOrange,
   ),
   Category(
     id: 'guide',
     title: 'VMR',
+    imagePath: '',
     color: Colors.deepOrange,
   ),
   Category(
     id: 'guide',
     title: 'Confined Space Rescue',
+    imagePath: '',
     color: Colors.deepOrange,
   ),
   Category(
     id: 'guide',
     title: 'Trench Rescue',
+    imagePath: '',
     color: Colors.deepOrange,
   ),
   Category(
     id: 'manual',
     title: 'Clutch',
+    imagePath: 'assets/images/clutch.jpeg',
     color: Colors.green,
   ),
   Category(
     id: 'manual',
     title: 'MPD',
+    imagePath: '',
     color: Colors.green,
   ),
   Category(
     id: 'manual',
     title: 'AZ Vortex',
+    imagePath: '',
     color: Colors.green,
   ),
   Category(
     id: 'manual',
     title: 'Aztek',
+    imagePath: '',
     color: Colors.green,
   ),
   Category(
     id: 'manual',
     title: 'CSR2 Pulley',
+    imagePath: '',
     color: Colors.green,
+  ),
+  Category(
+    id: 'document',
+    title: 'FEMA: 214',
+    imagePath: '',
+    color: Colors.blue,
   ),
 ];
 
@@ -64,7 +80,7 @@ const categorySections = [
       'Structural Collapse',
     ],
     title: 'test',
-    imageURL: '',
+    imagePath: 'assets/images/clutch.jpeg',
     requiredItems: [
       '4 Tomatoes',
       '1 Tablespoon of Olive Oil',
@@ -89,7 +105,7 @@ const categorySections = [
       'Structural Collapse',
     ],
     title: 'Toast Hawaii',
-    imageURL: '',
+    imagePath: '',
     requiredItems: [
       '1 Slice White Bread',
       '1 Slice Ham',
@@ -102,5 +118,15 @@ const categorySections = [
       'Layer ham, the pineapple and cheese on the white bread',
       'Bake the toast for round about 10 minutes in the oven at 200°C'
     ],
+  ),
+  Section(
+    id: 's3',
+    categories: [
+      'Clutch',
+    ],
+    title: 'Table of Contents',
+    imagePath: 'assets/images/clutch.jpeg',
+    requiredItems: [],
+    steps: [],
   ),
 ];

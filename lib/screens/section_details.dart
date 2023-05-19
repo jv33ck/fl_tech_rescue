@@ -42,8 +42,8 @@ class SectionDetailsScreen extends ConsumerWidget {
       body: SingleChildScrollView(
         child: Column(
           children: [
-            Image.network(
-              section.imageURL,
+            Image.asset(
+              section.imagePath,
               height: 300,
               width: double.infinity,
               fit: BoxFit.cover,

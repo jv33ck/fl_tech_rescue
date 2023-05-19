@@ -3,7 +3,7 @@ class Section {
     required this.id,
     required this.categories,
     required this.title,
-    required this.imageURL,
+    required this.imagePath,
     required this.requiredItems,
     required this.steps,
   });
@@ -11,7 +11,7 @@ class Section {
   final String id;
   final List<String> categories;
   final String title;
-  final String imageURL;
+  final String imagePath;
   final List<String> requiredItems;
   final List<String> steps;
 }
