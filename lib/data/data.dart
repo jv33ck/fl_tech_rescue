@@ -6,54 +6,54 @@ import 'package:fl_tech_rescue/models/section.dart';
 // Constants in Dart should be written in lowerCamelcase.
 const availableCategories = [
   Category(
-    id: 'c1',
+    id: 'guide',
     title: 'Structural Collapse',
-    color: Colors.blueGrey,
+    color: Colors.deepOrange,
   ),
   Category(
-    id: 'c2',
+    id: 'guide',
     title: 'Rope Rescue',
-    color: Colors.blueGrey,
+    color: Colors.deepOrange,
   ),
   Category(
-    id: 'c3',
+    id: 'guide',
     title: 'VMR',
-    color: Colors.blueGrey,
+    color: Colors.deepOrange,
   ),
   Category(
-    id: 'c4',
+    id: 'guide',
     title: 'Confined Space Rescue',
-    color: Colors.blueGrey,
+    color: Colors.deepOrange,
   ),
   Category(
-    id: 'c5',
+    id: 'guide',
     title: 'Trench Rescue',
-    color: Colors.blueGrey,
+    color: Colors.deepOrange,
   ),
   Category(
-    id: 'c6',
+    id: 'manual',
     title: 'Clutch',
-    color: Colors.blueGrey,
+    color: Colors.green,
   ),
   Category(
-    id: 'c7',
+    id: 'manual',
     title: 'MPD',
-    color: Colors.blueGrey,
+    color: Colors.green,
   ),
   Category(
-    id: 'c8',
+    id: 'manual',
     title: 'AZ Vortex',
-    color: Colors.blueGrey,
+    color: Colors.green,
   ),
   Category(
-    id: 'c9',
+    id: 'manual',
     title: 'Aztek',
-    color: Colors.blueGrey,
+    color: Colors.green,
   ),
   Category(
-    id: 'c10',
+    id: 'manual',
     title: 'CSR2 Pulley',
-    color: Colors.blueGrey,
+    color: Colors.green,
   ),
 ];
 
@@ -61,10 +61,10 @@ const categorySections = [
   Section(
     id: 's1',
     categories: [
-      'c1',
+      'Structural Collapse',
     ],
-    title: 'Spaghetti with Tomato Sauce',
-    imagePath: '',
+    title: 'test',
+    imageURL: '',
     requiredItems: [
       '4 Tomatoes',
       '1 Tablespoon of Olive Oil',
@@ -86,10 +86,10 @@ const categorySections = [
   Section(
     id: 's2',
     categories: [
-      'c1',
+      'Structural Collapse',
     ],
     title: 'Toast Hawaii',
-    imagePath: '',
+    imageURL: '',
     requiredItems: [
       '1 Slice White Bread',
       '1 Slice Ham',

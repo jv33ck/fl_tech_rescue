@@ -5,11 +5,14 @@ import 'package:fl_tech_rescue/widgets/category_grid_item.dart';
 import 'package:flutter/material.dart';
 
 class CategoriesScreen extends StatelessWidget {
-  const CategoriesScreen({super.key});
+  final String currentCategoryId;
+
+  const CategoriesScreen({Key? key, required this.currentCategoryId})
+      : super(key: key);
 
   void _selectCategory(BuildContext context, Category category) {
     final filteredSections = categorySections
-        .where((section) => section.categories.contains(category.id))
+        .where((section) => section.categories.contains(category.title))
         .toList();
 
     Navigator.of(context).push(
@@ -24,6 +27,11 @@ class CategoriesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    // Filter categories based on currentCategoryId
+    final filteredCategories = availableCategories
+        .where((category) => category.id == currentCategoryId)
+        .toList();
+
     return GridView(
       padding: const EdgeInsets.all(24),
       gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
@@ -33,8 +41,7 @@ class CategoriesScreen extends StatelessWidget {
         mainAxisSpacing: 20,
       ),
       children: [
-        // availableCategories.map((category) => CategoryGridItem(category: category))
-        for (final category in availableCategories)
+        for (final category in filteredCategories)
           CategoryGridItem(
             category: category,
             onSelectCategory: () {

@@ -29,7 +29,7 @@ class SectionItem extends StatelessWidget {
           children: [
             FadeInImage(
               placeholder: MemoryImage(kTransparentImage),
-              image: NetworkImage(section.imagePath),
+              image: NetworkImage(section.imageURL),
               fit: BoxFit.cover,
               height: 200,
               width: double.infinity,

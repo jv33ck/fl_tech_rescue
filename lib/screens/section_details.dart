@@ -43,7 +43,7 @@ class SectionDetailsScreen extends ConsumerWidget {
         child: Column(
           children: [
             Image.network(
-              section.imagePath,
+              section.imageURL,
               height: 300,
               width: double.infinity,
               fit: BoxFit.cover,
