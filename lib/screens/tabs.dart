@@ -28,17 +28,17 @@ class _TabsScreenState extends ConsumerState<TabsScreen> {
 
   void _setScreen(String identifier) {
     Navigator.of(context).pop(); // Close the drawer
-    if (identifier == 'Field Guides') {
+    if (identifier == 'Guides') {
       setState(() {
         currentCategoryId = 'guide';
         currentScreenTitle = 'Field Guides';
       });
-    } else if (identifier == 'Equipment Manuals') {
+    } else if (identifier == 'Manuals') {
       setState(() {
         currentCategoryId = 'manual';
         currentScreenTitle = 'Equipment Manuals';
       });
-    } else if (identifier == 'Deployment Documents') {
+    } else if (identifier == 'Documents') {
       setState(() {
         currentCategoryId = 'document';
         currentScreenTitle = 'Deployment Documents';

@@ -15,6 +15,7 @@ class CategoryGridItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
+      surfaceTintColor: Colors.black,
       margin: const EdgeInsets.all(8),
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(8),
@@ -43,11 +44,11 @@ class CategoryGridItem extends StatelessWidget {
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                   colors: [
-                    Colors.blueGrey.shade800.withOpacity(0.55),
-                    Colors.blueGrey.shade500.withOpacity(0.9),
+                    Colors.black12.withOpacity(1),
+                    category.color.withOpacity(1),
                   ],
-                  begin: Alignment.topLeft,
-                  end: Alignment.bottomRight,
+                  begin: Alignment.centerLeft,
+                  end: Alignment.centerRight,
                 )),
                 child: Center(
                   child: Text(

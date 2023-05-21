@@ -34,6 +34,7 @@ class MainDrawer extends StatelessWidget {
                   'Menu',
                   style: Theme.of(context).textTheme.titleLarge!.copyWith(
                         color: Theme.of(context).colorScheme.onSurface,
+                        fontSize: 28,
                       ),
                 ),
               ],
@@ -53,7 +54,7 @@ class MainDrawer extends StatelessWidget {
                   ),
             ),
             onTap: () {
-              onSelectScreen('Field Guides');
+              onSelectScreen('Guides');
             },
           ),
           ListTile(
@@ -70,7 +71,7 @@ class MainDrawer extends StatelessWidget {
                   ),
             ),
             onTap: () {
-              onSelectScreen('Equipment Manuals');
+              onSelectScreen('Manuals');
             },
           ),
           ListTile(
@@ -87,7 +88,7 @@ class MainDrawer extends StatelessWidget {
                   ),
             ),
             onTap: () {
-              onSelectScreen('Deployment Documents');
+              onSelectScreen('Documents');
             },
           ),
         ],

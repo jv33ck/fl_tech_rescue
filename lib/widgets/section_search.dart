@@ -28,6 +28,14 @@ class SectionSearch extends SearchDelegate {
   }
 
   @override
+  TextStyle get searchFieldStyle {
+    return const TextStyle(
+      color: Colors.white, // Set your desired color here
+      fontSize: 24,
+    );
+  }
+
+  @override
   Widget buildResults(BuildContext context) {
     // Show some result based on the selection. For now, let's not implement this.
     return Container();
@@ -54,15 +62,22 @@ class SectionSearch extends SearchDelegate {
             ),
           );
         },
-        title: Center(
-          child: Text(
+        title: Column(children: [
+          Text(
             suggestionList[index].title,
             style: Theme.of(context).textTheme.titleLarge!.copyWith(
                   color: Theme.of(context).colorScheme.onBackground,
-                  fontSize: 24,
+                  fontSize: 28,
                 ),
           ),
-        ),
+          Text(
+            suggestionList[index].categories[0],
+            style: Theme.of(context).textTheme.titleSmall!.copyWith(
+                  color: Theme.of(context).colorScheme.onBackground,
+                  fontSize: 14,
+                ),
+          ),
+        ]),
       ),
       itemCount: suggestionList.length,
       separatorBuilder: (context, index) {
