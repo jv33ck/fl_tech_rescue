@@ -19,8 +19,8 @@ class PDFViewer extends StatefulWidget {
 
 class _PdfViewerState extends State<PDFViewer> {
   String? localPath;
-  int _pageNumber = 0;
-  PDFViewController? _pdfViewController;
+  // int _pageNumber = 0;
+  // PDFViewController? _pdfViewController;
 
   @override
   void initState() {
@@ -51,14 +51,14 @@ class _PdfViewerState extends State<PDFViewer> {
             PDFView(
               filePath: localPath!,
               swipeHorizontal: true,
-              onViewCreated: (PDFViewController pdfViewController) {
-                _pdfViewController = pdfViewController;
-              },
-              onPageChanged: (pageNumber, _) {
-                setState(() {
-                  _pageNumber = pageNumber!;
-                });
-              },
+              // onViewCreated: (PDFViewController pdfViewController) {
+              //   _pdfViewController = pdfViewController;
+              // },
+              // onPageChanged: (pageNumber, _) {
+              //   setState(() {
+              //     _pageNumber = pageNumber!;
+              // });
+              // },
             ),
           ],
         ),
