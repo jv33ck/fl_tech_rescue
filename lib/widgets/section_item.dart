@@ -41,7 +41,7 @@ class SectionItem extends StatelessWidget {
                 decoration: BoxDecoration(
                     gradient: LinearGradient(
                   colors: [
-                    Colors.blueGrey.shade800.withOpacity(0.55),
+                    Colors.black12.withOpacity(1),
                     Colors.blueGrey.shade500.withOpacity(0.9),
                   ],
                   begin: Alignment.topLeft,
@@ -49,16 +49,16 @@ class SectionItem extends StatelessWidget {
                 )),
                 padding:
                     // const EdgeInsets.symmetric(vertical: 6, horizontal: 44),
-                    const EdgeInsets.only(top: 35, left: 30),
+                    const EdgeInsets.only(top: 35, left: 15),
                 child: Text(
                   section.title,
                   maxLines: 2,
-                  textAlign: TextAlign.left,
+                  textAlign: TextAlign.center,
                   softWrap: true,
                   overflow: TextOverflow.ellipsis, // Very long text ...
                   style: const TextStyle(
-                    fontSize: 20,
-                    fontWeight: FontWeight.bold,
+                    fontSize: 18,
+                    // fontWeight: FontWeight.bold,
                     color: Colors.white,
                   ),
                 ),
