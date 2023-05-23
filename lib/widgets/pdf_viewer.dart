@@ -2,15 +2,18 @@ import 'dart:io';
 import 'package:path_provider/path_provider.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_pdfview/flutter_pdfview.dart';
+// import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class PDFViewer extends StatefulWidget {
   const PDFViewer({
     Key? key,
     required this.pdfAssetPath,
+    this.startOnPage,
   }) : super(key: key);
 
   final String pdfAssetPath;
+  final int? startOnPage;
 
   @override
   // ignore: library_private_types_in_public_api
@@ -19,15 +22,16 @@ class PDFViewer extends StatefulWidget {
 
 class _PdfViewerState extends State<PDFViewer> {
   String? localPath;
-  // int _pageNumber = 0;
-  // PDFViewController? _pdfViewController;
+  PdfViewerController? _pdfViewController;
 
   @override
   void initState() {
     super.initState();
+    _pdfViewController = PdfViewerController();
     preparePdfFile().then((path) {
       setState(() {
         localPath = path;
+        _pdfViewController!.jumpToPage(widget.startOnPage ?? 0);
       });
     });
   }
@@ -48,12 +52,11 @@ class _PdfViewerState extends State<PDFViewer> {
       return Scaffold(
         body: Stack(
           children: [
-            PDFView(
-              filePath: localPath!,
-              swipeHorizontal: true,
-              // onViewCreated: (PDFViewController pdfViewController) {
-              //   _pdfViewController = pdfViewController;
-              // },
+            SfPdfViewer.asset(
+              localPath!,
+              controller: _pdfViewController,
+              canShowPaginationDialog: true,
+              pageLayoutMode: PdfPageLayoutMode.single,
               // onPageChanged: (pageNumber, _) {
               //   setState(() {
               //     _pageNumber = pageNumber!;

@@ -81,6 +81,8 @@ final categorySections = [
     ],
     title: 'USAR Marking Systems',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc_fog5.pdf',
+    startOnPage: 30,
   ),
   Section(
     id: 'sc2',
@@ -89,7 +91,8 @@ final categorySections = [
     ],
     title: 'Cut Station',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/word_test_item.pdf',
+    pdfPath: 'assets/pdfs/sc_fog5.pdf',
+    startOnPage: 54,
   ),
   Section(
     id: 'sc3',
@@ -98,7 +101,6 @@ final categorySections = [
     ],
     title: 'Capacities & Weights by material',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/word_test_2.pdf',
   ),
   Section(
     id: 'sc4',
