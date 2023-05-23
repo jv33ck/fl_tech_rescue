@@ -73,7 +73,7 @@ const availableCategories = [
   ),
 ];
 
-const categorySections = [
+final categorySections = [
   Section(
     id: 'sc1',
     categories: [
@@ -81,7 +81,6 @@ const categorySections = [
     ],
     title: 'USAR Marking Systems',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/test.pdf',
   ),
   Section(
     id: 'sc2',
@@ -90,7 +89,7 @@ const categorySections = [
     ],
     title: 'Cut Station',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc2.pdf',
+    pdfPath: 'assets/pdfs/word_test_item.pdf',
   ),
   Section(
     id: 'sc3',
@@ -99,7 +98,7 @@ const categorySections = [
     ],
     title: 'Capacities & Weights by material',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc3.pdf',
+    pdfPath: 'assets/pdfs/word_test_2.pdf',
   ),
   Section(
     id: 'sc4',
@@ -108,7 +107,6 @@ const categorySections = [
     ],
     title: 'T Spot Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: '',
   ),
   Section(
     id: 'sc5',
@@ -117,7 +115,6 @@ const categorySections = [
     ],
     title: 'Double T Spot Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: '',
   ),
   Section(
     id: 'sc6',
@@ -126,7 +123,6 @@ const categorySections = [
     ],
     title: 'Two Post Verticle Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: '',
   ),
   Section(
     id: 'sc7',
@@ -135,7 +131,6 @@ const categorySections = [
     ],
     title: 'Laced Post Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: '',
   ),
   Section(
     id: 'sc8',
@@ -144,7 +139,6 @@ const categorySections = [
     ],
     title: 'Std. Door / Window Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: '',
   ),
   Section(
     id: 'sc9',
@@ -153,7 +147,6 @@ const categorySections = [
     ],
     title: 'Pre-fab Door / Window Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: '',
   ),
   Section(
     id: 'sc10',
@@ -162,7 +155,6 @@ const categorySections = [
     ],
     title: 'Solid Sole Rakers - 60° and 45°',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: '',
   ),
   Section(
     id: 'sc11',
@@ -171,7 +163,6 @@ const categorySections = [
     ],
     title: 'Flying Raker',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: '',
   ),
   Section(
     id: 'sc12',
@@ -180,7 +171,6 @@ const categorySections = [
     ],
     title: 'Trough Base',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: '',
   ),
   Section(
     id: 'sc13',
@@ -189,7 +179,6 @@ const categorySections = [
     ],
     title: 'Split Sole Raker',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: '',
   ),
   Section(
     id: 'sc14',
@@ -198,6 +187,5 @@ const categorySections = [
     ],
     title: 'Sloped Floor Shoring',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: '',
   ),
 ];

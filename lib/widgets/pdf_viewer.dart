@@ -51,7 +51,6 @@ class _PdfViewerState extends State<PDFViewer> {
             PDFView(
               filePath: localPath!,
               swipeHorizontal: true,
-              fitPolicy: FitPolicy.BOTH,
               // onViewCreated: (PDFViewController pdfViewController) {
               //   _pdfViewController = pdfViewController;
               // },

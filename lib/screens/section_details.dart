@@ -40,9 +40,13 @@ class SectionDetailsScreen extends ConsumerWidget {
           )
         ],
       ),
-      body: PDFViewer(
-        pdfAssetPath: section.pdfPath,
+      body: Padding(
+        padding: const EdgeInsets.only(bottom: 30),
+        child: PDFViewer(
+          pdfAssetPath: section.pdfPath,
+        ),
       ),
+      //
     );
   }
 }
