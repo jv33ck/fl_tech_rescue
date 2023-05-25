@@ -3,7 +3,6 @@ import 'package:fl_tech_rescue/widgets/pdf_viewer.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:flutter/material.dart';
 import 'package:fl_tech_rescue/providers/favorites_provider.dart';
-// import 'package:syncfusion_flutter_pdfviewer/pdfviewer.dart';
 
 class SectionDetailsScreen extends ConsumerWidget {
   const SectionDetailsScreen({
@@ -45,6 +44,7 @@ class SectionDetailsScreen extends ConsumerWidget {
         padding: const EdgeInsets.only(bottom: 75),
         child: PDFViewer(
           pdfAssetPath: section.pdfPath,
+          //TODO: see pdf viewer file for changes
           startOnPage: section.startOnPage,
         ),
       ),

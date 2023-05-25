@@ -14,5 +14,5 @@ class Section {
   final String title;
   final String imagePath;
   final String pdfPath;
-  final int? startOnPage;
+  final int startOnPage;
 }

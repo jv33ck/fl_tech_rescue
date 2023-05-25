@@ -74,6 +74,9 @@ const availableCategories = [
 ];
 
 final categorySections = [
+//TODO: add floating button to pdfViewer screen for showing corresponding S.O.G. section
+//TODO: add floating button to pdfViewer screen for showing Cut List Generator
+
   Section(
     id: 'sc1',
     categories: [
@@ -81,8 +84,8 @@ final categorySections = [
     ],
     title: 'USAR Marking Systems',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc_fog5.pdf',
-    startOnPage: 30,
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 23,
   ),
   Section(
     id: 'sc2',
@@ -91,8 +94,8 @@ final categorySections = [
     ],
     title: 'Cut Station',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc_fog5.pdf',
-    startOnPage: 54,
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 50,
   ),
   Section(
     id: 'sc3',
@@ -101,6 +104,8 @@ final categorySections = [
     ],
     title: 'Capacities & Weights by material',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 50,
   ),
   Section(
     id: 'sc4',
@@ -109,6 +114,8 @@ final categorySections = [
     ],
     title: 'T Spot Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 52,
   ),
   Section(
     id: 'sc5',
@@ -117,6 +124,8 @@ final categorySections = [
     ],
     title: 'Double T Spot Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 56,
   ),
   Section(
     id: 'sc6',
@@ -125,6 +134,8 @@ final categorySections = [
     ],
     title: 'Two Post Verticle Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 62,
   ),
   Section(
     id: 'sc7',
@@ -133,6 +144,8 @@ final categorySections = [
     ],
     title: 'Laced Post Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 66,
   ),
   Section(
     id: 'sc8',
@@ -141,6 +154,8 @@ final categorySections = [
     ],
     title: 'Std. Door / Window Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 86,
   ),
   Section(
     id: 'sc9',
@@ -149,6 +164,8 @@ final categorySections = [
     ],
     title: 'Pre-fab Door / Window Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 89,
   ),
   Section(
     id: 'sc10',
@@ -157,6 +174,8 @@ final categorySections = [
     ],
     title: 'Solid Sole Rakers - 60° and 45°',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 112,
   ),
   Section(
     id: 'sc11',
@@ -165,6 +184,8 @@ final categorySections = [
     ],
     title: 'Flying Raker',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 108,
   ),
   Section(
     id: 'sc12',
@@ -173,6 +194,8 @@ final categorySections = [
     ],
     title: 'Trough Base',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 105,
   ),
   Section(
     id: 'sc13',
@@ -181,6 +204,8 @@ final categorySections = [
     ],
     title: 'Split Sole Raker',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 116,
   ),
   Section(
     id: 'sc14',
@@ -189,5 +214,7 @@ final categorySections = [
     ],
     title: 'Sloped Floor Shoring',
     imagePath: 'assets/images/structural_collapse_category.png',
+    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 76,
   ),
 ];

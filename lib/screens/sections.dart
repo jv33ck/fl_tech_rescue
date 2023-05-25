@@ -30,7 +30,7 @@ class SectionsScreen extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'Uh oh...nothing here!',
+            'Uh oh...nothing here yet!',
             style: Theme.of(context).textTheme.headlineLarge!.copyWith(
                   color: Theme.of(context).colorScheme.onBackground,
                 ),

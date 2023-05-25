@@ -31,6 +31,7 @@ class _PdfViewerState extends State<PDFViewer> {
     preparePdfFile().then((path) {
       setState(() {
         localPath = path;
+        // TODO: Try with jumpToBookmark method instead of jumpToPage
         _pdfViewController!.jumpToPage(widget.startOnPage ?? 0);
       });
     });
@@ -52,23 +53,25 @@ class _PdfViewerState extends State<PDFViewer> {
       return Scaffold(
         body: Stack(
           children: [
-            SfPdfViewer.asset(
-              localPath!,
-              controller: _pdfViewController,
-              canShowPaginationDialog: true,
-              pageLayoutMode: PdfPageLayoutMode.single,
-              // onPageChanged: (pageNumber, _) {
-              //   setState(() {
-              //     _pageNumber = pageNumber!;
-              // });
-              // },
+            Padding(
+              padding: const EdgeInsets.only(bottom: 10),
+              child: SfPdfViewer.asset(
+                localPath!,
+                controller: _pdfViewController,
+                canShowPaginationDialog: true,
+                pageLayoutMode: PdfPageLayoutMode.single,
+              ),
             ),
           ],
         ),
       );
     } else {
       return const Scaffold(
-        body: Center(child: CircularProgressIndicator()),
+        body: Center(
+          child: CircularProgressIndicator(
+            color: Colors.deepOrange,
+          ),
+        ),
       );
     }
   }
