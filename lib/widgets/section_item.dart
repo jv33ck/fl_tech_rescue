@@ -53,7 +53,7 @@ class SectionItem extends StatelessWidget {
                 child: Text(
                   section.title,
                   maxLines: 2,
-                  textAlign: TextAlign.center,
+                  textAlign: TextAlign.left,
                   softWrap: true,
                   overflow: TextOverflow.ellipsis, // Very long text ...
                   style: const TextStyle(

@@ -33,3 +33,20 @@ class App extends StatelessWidget {
     );
   }
 }
+
+//TODO: Fix icon launcher; may have to change icon
+//
+//TODO: Finish STC sections
+//  Icons per section
+//
+//TODO: ANDROID RELEASE:
+//  Configure server APK: MIME-TYPE [application/vnd.android.package-archive].
+//  Prepare your application for release.
+//  Host the release-ready APK file on your server and provide a download link to users.
+//
+// TODO: IOS RELEASE:
+//  Prepare your application for release.
+//  Host the release-ready APK; provide a download link to users.
+//  Configure server APK: MIME-TYPE.
+//
+// * see gpt instructions for details on steps to take

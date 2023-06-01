@@ -74,147 +74,169 @@ const availableCategories = [
 ];
 
 final categorySections = [
-//TODO: add floating button to pdfViewer screen for showing corresponding S.O.G. section
 //TODO: add floating button to pdfViewer screen for showing Cut List Generator
+//TODO: add thumbnail images to all sections; placeholder image for all sections without content
 
   Section(
-    id: 'sc1',
+    id: 'sc0',
     categories: [
       'Structural Collapse',
     ],
-    title: 'USAR Marking Systems',
-    imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
-    startOnPage: 23,
+    title: 'Markings: Structure/Hazards',
+    imagePath: 'assets/images/sc0_27.png',
+    startOnPage: 27,
   ),
   Section(
-    id: 'sc2',
+    id: 'sc0',
     categories: [
       'Structural Collapse',
     ],
-    title: 'Cut Station',
-    imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
-    startOnPage: 50,
+    title: 'Markings: Search Assessment',
+    imagePath: 'assets/images/sc0_30.png',
+    startOnPage: 30,
   ),
   Section(
-    id: 'sc3',
+    id: 'sc0',
     categories: [
       'Structural Collapse',
     ],
-    title: 'Capacities & Weights by material',
-    imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
-    startOnPage: 50,
+    title: 'Markings: Victim Location',
+    imagePath: 'assets/images/sc0_33.png',
+    startOnPage: 33,
   ),
   Section(
-    id: 'sc4',
+    id: 'sc0',
+    categories: [
+      'Structural Collapse',
+    ],
+    title: 'Material Weight Estimation',
+    imagePath: 'assets/images/sc0_36.png',
+    startOnPage: 36,
+  ),
+  Section(
+    id: 'sc0',
+    categories: [
+      'Structural Collapse',
+    ],
+    title: 'Raker Length & Angles',
+    imagePath: 'assets/images/sc0_106.png',
+    startOnPage: 106,
+  ),
+  Section(
+    id: 'sc0',
     categories: [
       'Structural Collapse',
     ],
     title: 'T Spot Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
     startOnPage: 52,
   ),
   Section(
-    id: 'sc5',
+    id: 'sc0',
     categories: [
       'Structural Collapse',
     ],
     title: 'Double T Spot Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
     startOnPage: 56,
   ),
   Section(
-    id: 'sc6',
+    id: 'sc0',
     categories: [
       'Structural Collapse',
     ],
-    title: 'Two Post Verticle Shore',
+    title: '2 Post Verticle Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
     startOnPage: 62,
   ),
   Section(
-    id: 'sc7',
+    id: 'sc0',
     categories: [
       'Structural Collapse',
     ],
     title: 'Laced Post Shore',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
     startOnPage: 66,
   ),
   Section(
-    id: 'sc8',
+    id: 'sc0',
     categories: [
       'Structural Collapse',
     ],
-    title: 'Std. Door / Window Shore',
+    title: 'Sloped Floor: Type 2',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 76,
+  ),
+  Section(
+    id: 'sc0',
+    categories: [
+      'Structural Collapse',
+    ],
+    title: 'Sloped Floor: Type 3',
+    imagePath: 'assets/images/structural_collapse_category.png',
+    startOnPage: 80,
+  ),
+  Section(
+    id: 'sc0',
+    categories: [
+      'Structural Collapse',
+    ],
+    title: 'Std. Door/Window Shoring',
+    imagePath: 'assets/images/structural_collapse_category.png',
     startOnPage: 86,
   ),
   Section(
-    id: 'sc9',
+    id: 'sc0',
     categories: [
       'Structural Collapse',
     ],
-    title: 'Pre-fab Door / Window Shore',
+    title: 'Pre-fab Door/Window Shoring',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
     startOnPage: 89,
   ),
   Section(
-    id: 'sc10',
-    categories: [
-      'Structural Collapse',
-    ],
-    title: 'Solid Sole Rakers - 60° and 45°',
-    imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
-    startOnPage: 112,
-  ),
-  Section(
-    id: 'sc11',
-    categories: [
-      'Structural Collapse',
-    ],
-    title: 'Flying Raker',
-    imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
-    startOnPage: 108,
-  ),
-  Section(
-    id: 'sc12',
+    id: 'sc0',
     categories: [
       'Structural Collapse',
     ],
     title: 'Trough Base',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
     startOnPage: 105,
   ),
   Section(
-    id: 'sc13',
+    id: 'sc0',
     categories: [
       'Structural Collapse',
     ],
-    title: 'Split Sole Raker',
+    title: 'Flying Raker',
     imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
+    startOnPage: 108,
+  ),
+  Section(
+    id: 'sc0',
+    categories: [
+      'Structural Collapse',
+    ],
+    title: 'Solid Sole Rakers',
+    imagePath: 'assets/images/structural_collapse_category.png',
+    startOnPage: 112,
+  ),
+  Section(
+    id: 'sc0',
+    categories: [
+      'Structural Collapse',
+    ],
+    title: 'Split Sole Rakers',
+    imagePath: 'assets/images/structural_collapse_category.png',
     startOnPage: 116,
   ),
   Section(
-    id: 'sc14',
+    id: 'clutch0',
     categories: [
-      'Structural Collapse',
+      'Clutch',
     ],
-    title: 'Sloped Floor Shoring',
-    imagePath: 'assets/images/structural_collapse_category.png',
-    pdfPath: 'assets/pdfs/sc0.pdf',
-    startOnPage: 76,
+    title: 'Clutch',
+    imagePath: 'assets/images/clutch.jpeg',
+    startOnPage: 3,
   ),
 ];

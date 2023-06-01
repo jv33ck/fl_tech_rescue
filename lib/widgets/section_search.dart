@@ -47,7 +47,7 @@ class SectionSearch extends SearchDelegate {
     final List<Section> suggestionList = query.isEmpty
         ? []
         : categorySections
-            .where((p) => p.title.toLowerCase().startsWith(query.toLowerCase()))
+            .where((p) => p.title.toLowerCase().contains(query.toLowerCase()))
             .toList();
 
     return ListView.separated(
@@ -62,7 +62,7 @@ class SectionSearch extends SearchDelegate {
             ),
           );
         },
-        title: Column(children: [
+        title: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
             suggestionList[index].title,
             style: Theme.of(context).textTheme.titleLarge!.copyWith(

@@ -44,7 +44,6 @@ class SectionDetailsScreen extends ConsumerWidget {
         padding: const EdgeInsets.only(bottom: 75),
         child: PDFViewer(
           pdfAssetPath: section.pdfPath,
-          //TODO: see pdf viewer file for changes
           startOnPage: section.startOnPage,
         ),
       ),
